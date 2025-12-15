@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СибЭлектроПроект - Профессиональные электромонтажные работы в Новосибирске</title>
+    <meta name="description" content="Электромонтажные работы под ключ для офисов, складов и производств в Новосибирске. Профессиональные электрики с опытом работы более 10 лет.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="logo-container">
+                <img src="resources/logo.png" alt="СибЭлектроПроект" class="logo-img" loading="lazy">
+                <div class="logo-text">
+                    <h1>СибЭлектроПроект</h1>
+                    <p>Новосибирск</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="tel:+73832222222" class="phone-btn">
+                    <i class="fas fa-phone"></i> +7 (383) 222-22-22
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <a href="index.html" class="nav-link active block">Главная</a>
+                <a href="services.html" class="nav-link block">Услуги</a>
+                <a href="contacts.html" class="nav-link block">Контакты</a>
+                <a href="tel:+73832222222" class="nav-link block text-orange-600">+7 (383) 222-22-22</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <img src="resources/hero-electrician.jpg" alt="Электромонтажные работы" loading="lazy">
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Электромонтажные работы 
+                        <span class="text-gradient">под ключ</span>
+                    </h1>
+                    <p class="hero-description">
+                        Профессиональные электромонтажные работы для офисов, складов и производственных помещений в Новосибирске. 
+                        Опыт работы более 10 лет, гарантия качества, соблюдение всех нормативов.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button onclick="showCalculator()" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Рассчитать стоимость
+                        </button>
+                        <a href="tel:+73832222222" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Позвонить нам
+                        </a>
+                    </div>
+                    
+                    <!-- Статистика -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="counter" data-target="250">0</div>
+                            <div class="stat-label">Выполненных проектов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="counter" data-target="10">0</div>
+                            <div class="stat-label">Лет опыта работы</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="counter" data-target="98">0</div>
+                            <div class="stat-label">% довольных клиентов</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="floating">
+                        <img src="resources/hero-electrician.jpg" alt="Электромонтажные работы" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обзор услуг -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-subtitle">
+                Комплексные электромонтажные решения для любых типов коммерческих помещений
+            </p>
+            
+            <div class="services-grid">
+                <!-- Услуги для офисов -->
+                <div class="service-card">
+                    <div class="card-icon bg-blue-100">
+                        <i class="fas fa-building text-blue-600"></i>
+                    </div>
+                    <img src="resources/office-electrical.jpg" alt="Электрика в офисе" class="card-image" loading="lazy">
+                    <h3 class="card-title">Электрика для офисов</h3>
+                    <p class="card-description">
+                        Полный комплекс электромонтажных работ в офисных помещениях: 
+                        установка розеток, выключателей, освещения, электрощитов, 
+                        прокладка кабельных линий.
+                    </p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Монтаж от 3 дней</li>
+                        <li><i class="fas fa-check"></i> Гарантия 3 года</li>
+                        <li><i class="fas fa-check"></i> Соблюдение СНиП и ПУЭ</li>
+                    </ul>
+                    <div class="card-price text-blue-600">от 25 000 ₽</div>
+                    <button onclick="showCalculator()" class="btn btn-primary btn-full">
+                        Заказать расчет
+                    </button>
+                </div>
+                
+                <!-- Услуги для складов -->
+                <div class="service-card">
+                    <div class="card-icon bg-orange-100">
+                        <i class="fas fa-warehouse text-orange-600"></i>
+                    </div>
+                    <img src="resources/warehouse-electrical.jpg" alt="Электрика на складе" class="card-image" loading="lazy">
+                    <h3 class="card-title">Электрика для складов</h3>
+                    <p class="card-description">
+                        Электромонтажные работы в складских помещениях: 
+                        промышленное освещение, силовые линии, 
+                        системы заземления, молниезащита.
+                    </p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Монтаж от 5 дней</li>
+                        <li><i class="fas fa-check"></i> Гарантия 5 лет</li>
+                        <li><i class="fas fa-check"></i> Энергоаудит бесплатно</li>
+                    </ul>
+                    <div class="card-price text-orange-600">от 45 000 ₽</div>
+                    <button onclick="showCalculator()" class="btn btn-primary btn-full">
+                        Заказать расчет
+                    </button>
+                </div>
+                
+                <!-- Услуги для производств -->
+                <div class="service-card">
+                    <div class="card-icon bg-green-100">
+                        <i class="fas fa-industry text-green-600"></i>
+                    </div>
+                    <img src="resources/manufacturing-electrical.jpg" alt="Электрика на производстве" class="card-image" loading="lazy">
+                    <h3 class="card-title">Электрика для производств</h3>
+                    <p class="card-description">
+                        Электромонтаж на производственных объектах: 
+                        силовое оборудование, автоматизация, 
+                        системы управления, резервное питание.
+                    </p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check"></i> Монтаж от 7 дней</li>
+                        <li><i class="fas fa-check"></i> Гарантия 5 лет</li>
+                        <li><i class="fas fa-check"></i> Пусконаладочные работы</li>
+                    </ul>
+                    <div class="card-price text-green-600">от 85 000 ₽</div>
+                    <button onclick="showCalculator()" class="btn btn-primary btn-full">
+                        Заказать расчет
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">10 лет успешной работы на рынке электромонтажных услуг Новосибирска</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="advantage-title">Лицензии и сертификаты</h3>
+                    <p class="advantage-description">
+                        Все необходимые разрешения для выполнения электромонтажных работ любой сложности
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="advantage-title">Соблюдение сроков</h3>
+                    <p class="advantage-description">
+                        Точное выполнение работ в оговоренные сроки без задержек и простоев
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="advantage-title">Гарантия качества</h3>
+                    <p class="advantage-description">
+                        Долгосрочная гарантия на все виды работ и бесплатное сервисное обслуживание
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="advantage-title">Прозрачные цены</h3>
+                    <p class="advantage-description">
+                        Фиксированная стоимость работ без скрытых платежей и неожиданных доплат
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно калькулятора -->
+<div id="calculator-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Калькулятор стоимости</h3>
+            <button onclick="hideCalculator()" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <form id="calculator-form">
+            <div class="form-group">
+                <label class="form-label">Тип помещения</label>
+                <select id="room-type" class="form-input">
+                    <option value="office">Офис</option>
+                    <option value="warehouse">Склад</option>
+                    <option value="manufacturing">Производство</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Площадь (м²)</label>
+                <input type="number" id="area" class="form-input" placeholder="100" min="1">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Количество розеток</label>
+                <input type="number" id="sockets" class="form-input" placeholder="10" min="0">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Количество светильников</label>
+                <input type="number" id="lights" class="form-input" placeholder="15" min="0">
+            </div>
+            
+            <div class="form-group">
+                <div class="price-display">
+                    <div class="price-label">Предварительная стоимость:</div>
+                    <div id="total-price" class="price-value">0 ₽</div>
+                </div>
+            </div>
+            
+            <div class="form-group calculator-buttons">
+                <button type="button" onclick="submitCalculator()" class="btn btn-primary">
+                    Отправить заявку
+                </button>
+                <button type="button" onclick="hideCalculator()" class="btn btn-calc-close">
+                    Закрыть
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="resources/logo.png" alt="СибЭлектроПроект" width="40" height="40" loading="lazy">
+                        <div>
+                            <h3>СибЭлектроПроект</h3>
+                            <p>Новосибирск</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Профессиональные электромонтажные работы для офисов, складов и производств. 
+                        Работаем в Новосибирске и области.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Электрика для офисов</a></li>
+                        <li><a href="services.html">Электрика для складов</a></li>
+                        <li><a href="services.html">Электрика для производств</a></li>
+                        <li><a href="services.html">Проектирование</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +7 (383) 222-22-22</li>
+                        <li><i class="fas fa-envelope"></i> info@sibelectro.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Новосибирск, ул. Жуковского, 2</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 8:00-18:00</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Мессенджеры</h4>
+                    <div class="messengers">
+                        <a href="https://wa.me/73832222222" class="messenger-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://t.me/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://vk.com/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-vk"></i> VK
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 СибЭлектроПроект. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="main.js"></script>
+</body>
+</html>

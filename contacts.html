@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - СибЭлектроПроект | Электромонтажные работы в Новосибирске</title>
+    <meta name="description" content="Контактная информация СибЭлектроПроект. Телефон, адрес, режим работы. Заказать электромонтажные работы в Новосибирске.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="logo-container">
+                <img src="resources/logo.png" alt="СибЭлектроПроект" class="logo-img" loading="lazy">
+                <div class="logo-text">
+                    <h1>СибЭлектроПроект</h1>
+                    <p>Новосибирск</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="contacts.html" class="nav-link active">Контакты</a>
+                <a href="tel:+73832222222" class="phone-btn">
+                    <i class="fas fa-phone"></i> +7 (383) 222-22-22
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <a href="index.html" class="nav-link block">Главная</a>
+                <a href="services.html" class="nav-link block">Услуги</a>
+                <a href="contacts.html" class="nav-link active block">Контакты</a>
+                <a href="tel:+73832222222" class="nav-link block text-orange-600">+7 (383) 222-22-22</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="contacts-hero">
+        <div class="contacts-hero-bg">
+            <img src="resources/hero-electrician.jpg" alt="Электромонтажные работы" loading="lazy">
+        </div>
+        
+        <div class="container">
+            <div class="contacts-hero-content">
+                <h1 class="contacts-hero-title">Контакты</h1>
+                <p class="contacts-hero-description">
+                    Свяжитесь с нами любым удобным способом. Мы всегда готовы ответить на ваши вопросы и помочь с выбором услуг.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контактная информация -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Телефон -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-blue-100">
+                        <i class="fas fa-phone text-blue-600"></i>
+                    </div>
+                    <h3 class="contact-card-title">Телефон</h3>
+                    <p class="contact-card-description">
+                        Звоните нам в рабочее время или оставьте заявку на обратный звонок
+                    </p>
+                    <div class="contact-info">
+                        <a href="tel:+73832222222" class="phone-number">
+                            +7 (383) 222-22-22
+                        </a>
+                        <p class="work-hours">Пн-Пт: 8:00-18:00</p>
+                    </div>
+                    <button onclick="showCallbackForm()" class="btn btn-primary">
+                        Заказать звонок
+                    </button>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-orange-100">
+                        <i class="fas fa-envelope text-orange-600"></i>
+                    </div>
+                    <h3 class="contact-card-title">Email</h3>
+                    <p class="contact-card-description">
+                        Отправьте нам письмо с описанием задачи и получите консультацию
+                    </p>
+                    <div class="contact-info">
+                        <a href="mailto:info@sibelectro.ru" class="email-address">
+                            info@sibelectro.ru
+                        </a>
+                        <p class="response-time">Ответ в течение 1 часа</p>
+                    </div>
+                    <button onclick="showEmailForm()" class="btn btn-primary">
+                        Написать письмо
+                    </button>
+                </div>
+                
+                <!-- Адрес -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-green-100">
+                        <i class="fas fa-map-marker-alt text-green-600"></i>
+                    </div>
+                    <h3 class="contact-card-title">Адрес офиса</h3>
+                    <p class="contact-card-description">
+                        Приезжайте к нам для личной консультации и заключения договора
+                    </p>
+                    <div class="contact-info">
+                        <p class="address">
+                            г. Новосибирск<br>
+                            ул. Жуковского, 2
+                        </p>
+                        <p class="office-hours">Пн-Пт: 9:00-17:00</p>
+                    </div>
+                    <button onclick="showMap()" class="btn btn-primary">
+                        Показать на карте
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Дополнительные способы связи -->
+            <div class="contact-methods">
+                <div class="method-card">
+                    <div class="method-icon bg-green-100">
+                        <i class="fab fa-whatsapp text-green-600"></i>
+                    </div>
+                    <h4 class="method-title">WhatsApp</h4>
+                    <p class="method-description">Быстрая связь и консультации</p>
+                    <a href="https://wa.me/73832222222" class="method-link" target="_blank">
+                        Написать в WhatsApp
+                    </a>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon bg-blue-100">
+                        <i class="fab fa-telegram text-blue-600"></i>
+                    </div>
+                    <h4 class="method-title">Telegram</h4>
+                    <p class="method-description">Оперативные ответы на вопросы</p>
+                    <a href="https://t.me/taycan_ru" class="method-link" target="_blank">
+                        Написать в Telegram
+                    </a>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon bg-blue-100">
+                        <i class="fab fa-vk text-blue-600"></i>
+                    </div>
+                    <h4 class="method-title">VK</h4>
+                    <p class="method-description">Удобное общение и передача файлов</p>
+                    <a href="https://vk.com/taycan_ru" class="method-link" target="_blank">
+                        Написать в VK
+                    </a>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon bg-red-100">
+                        <i class="fas fa-phone text-red-600"></i>
+                    </div>
+                    <h4 class="method-title">Бесплатный вызов</h4>
+                    <p class="method-description">Выезд специалиста на объект</p>
+                    <a href="tel:88002222222" class="method-link">
+                        8-800-222-22-22
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title text-center">Оставить заявку</h2>
+                <p class="section-subtitle">
+                    Заполните форму и получите бесплатную консультацию и предварительный расчет стоимости работ
+                </p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required class="form-input" placeholder="+7 (999) 999-99-99">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="object-type" class="form-label">Тип объекта</label>
+                            <select id="object-type" name="object-type" class="form-input">
+                                <option value="">Выберите тип объекта</option>
+                                <option value="office">Офис</option>
+                                <option value="warehouse">Склад</option>
+                                <option value="manufacturing">Производство</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="area" class="form-label">Площадь помещения (м²)</label>
+                        <input type="number" id="area" name="area" class="form-input" placeholder="Например: 150" min="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" class="form-input" placeholder="Опишите вашу задачу или вопросы..."></textarea>
+                    </div>
+                    
+                    <!-- Добавлено поле для согласия -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy" class="checkbox-label">
+                            Согласен на обработку персональных данных
+                        </label>
+                    </div>
+                    
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Отправить заявку
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title text-center">Как нас найти</h2>
+        <p class="section-subtitle">
+            Наш офис находится в Новосибирске, на улице Жуковского 2
+        </p>
+        
+        <div class="map-grid">
+            <!-- Контейнер для карты с fallback -->
+            <div id="map-container">
+                <div id="map"></div>
+                <!-- Fallback показывается если карта не загрузилась -->
+                <div id="map-fallback" class="map-fallback" style="display: none;">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>СибЭлектроПроект</h3>
+                    <p>г. Новосибирск, ул. Жуковского, 2</p>
+                    <p>Офис 101, 1 этаж</p>
+                    <div class="address-detail">
+                        <p>Метро: Площадь Заельцовского (30 минуты пешком)</p>
+                        <p>Парковка: бесплатная у офиса</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-info">
+                <div class="info-item">
+                    <div class="info-icon bg-blue-100">
+                        <i class="fas fa-map-marker-alt text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Адрес</h3>
+                        <p class="info-text">
+                            г. Новосибирск<br>
+                            ул. Жуковского, 2<br>
+                            офис 101, 1 этаж
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon bg-orange-100">
+                        <i class="fas fa-clock text-orange-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Режим работы</h3>
+                        <p class="info-text">
+                            <strong>Офис:</strong> Пн-Пт: 9:00-17:00<br>
+                            <strong>Телефон:</strong> Пн-Пт: 8:00-18:00<br>
+                            <strong>Аварийная служба:</strong> 24/7
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon bg-green-100">
+                        <i class="fas fa-car text-green-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Как добраться</h3>
+                        <p class="info-text">
+                            Метро: Площадь Заельцовского (30 минут пешком)<br>
+                            Автобус: остановка "Улица Жуковского"<br>
+                            Парковка: бесплатная у офиса
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Модальное окно обратного звонка -->
+    <div id="callback-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Заказать звонок</h3>
+                <button onclick="hideCallbackForm()" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="callback-form" class="callback-form">
+                <div class="form-group">
+                    <label for="callback-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="callback-name" name="callback-name" required class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="callback-phone" class="form-label">Телефон</label>
+                    <input type="tel" id="callback-phone" name="callback-phone" required class="form-input" placeholder="+7 (999) 999-99-99">
+                </div>
+                
+                <div class="form-group">
+                    <label for="callback-time" class="form-label">Удобное время для звонка</label>
+                    <select id="callback-time" name="callback-time" class="form-input">
+                        <option value="">В любое время</option>
+                        <option value="morning">Утром (9:00-12:00)</option>
+                        <option value="afternoon">Днем (12:00-17:00)</option>
+                        <option value="evening">Вечером (17:00-18:00)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group calculator-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        Заказать звонок
+                    </button>
+                    <button type="button" onclick="hideCallbackForm()" class="btn btn-calc-close">
+                        Отмена
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="resources/logo.png" alt="СибЭлектроПроект" width="40" height="40" loading="lazy">
+                        <div>
+                            <h3>СибЭлектроПроект</h3>
+                            <p>Новосибирск</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Профессиональные электромонтажные работы для офисов, складов и производств. 
+                        Работаем в Новосибирске и области.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Электрика для офисов</a></li>
+                        <li><a href="services.html">Электрика для складов</a></li>
+                        <li><a href="services.html">Электрика для производств</a></li>
+                        <li><a href="services.html">Проектирование</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +7 (383) 222-22-22</li>
+                        <li><i class="fas fa-envelope"></i> info@sibelectro.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Новосибирск, ул. Жуковского, 2</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 8:00-18:00</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Мессенджеры</h4>
+                    <div class="messengers">
+                        <a href="https://wa.me/73832222222" class="messenger-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://t.me/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://vk.com/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-vk"></i> VK
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 СибЭлектроПроект. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+            <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // === КОНФИГУРАЦИЯ TELEGRAM БОТА ===
+        const TELEGRAM_BOT_TOKEN = '7204240499:AAF9u5gkezodVw530vvauGfT4Wp3sNrSynM';
+        const TELEGRAM_CHAT_ID = '5467918811';
+        const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        
+        // Переменные для карты и модального окна
+        let map = null;
+        let mapInitialized = false;
+        
+        // Функция отправки в Telegram
+        async function sendToTelegram(formData, formType = 'contact') {
+            let message = '';
+            
+            if (formType === 'contact') {
+                // Сообщение для формы обратной связи
+                message = `
+<b>📋 НОВАЯ ЗАЯВКА С САЙТА</b>
+
+<b>👤 Имя:</b> ${formData.name}
+<b>📞 Телефон:</b> ${formData.phone}
+<b>📧 Email:</b> ${formData.email || 'не указан'}
+<b>🏢 Тип объекта:</b> ${formData['object-type'] || 'не указан'}
+<b>📏 Площадь:</b> ${formData.area || 'не указана'} м²
+<b>💬 Сообщение:</b> ${formData.message || 'нет'}
+
+<b>🕒 Время:</b> ${new Date().toLocaleString('ru-RU')}
+<b>🌐 Страница:</b> Контакты
+                `.trim();
+            } else if (formType === 'callback') {
+                // Сообщение для формы обратного звонка
+                message = `
+<b>📞 ЗАКАЗ ОБРАТНОГО ЗВОНКА</b>
+
+<b>👤 Имя:</b> ${formData['callback-name']}
+<b>📞 Телефон:</b> ${formData['callback-phone']}
+<b>⏰ Удобное время:</b> ${formData['callback-time'] || 'в любое время'}
+
+<b>🕒 Время заявки:</b> ${new Date().toLocaleString('ru-RU')}
+                `.trim();
+            }
+            
+            try {
+                const response = await fetch(TELEGRAM_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML',
+                        disable_web_page_preview: true
+                    })
+                });
+                
+                const data = await response.json();
+                return data.ok;
+            } catch (error) {
+                console.error('Ошибка отправки в Telegram:', error);
+                return false;
+            }
+        }
+        
+        // Инициализация карты
+        function initMap() {
+            const mapContainer = document.getElementById('map');
+            if (!mapContainer || mapInitialized) return;
+            
+            try {
+                const lat = 55.081138;
+                const lng = 82.896804;
+                
+                map = L.map('map').setView([lat, lng], 16);
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors',
+                    maxZoom: 19,
+                    minZoom: 10
+                }).addTo(map);
+                
+                // Добавить маркер
+                L.marker([lat, lng]).addTo(map)
+                    .bindPopup(`
+                        <b>СибЭлектроПроект</b><br>
+                        ул. Жуковского, 2<br>
+                        Новосибирск<br>
+                        <small>Офис 101, 1 этаж</small>
+                    `)
+                    .openPopup();
+                
+                // Добавить круг для области
+                L.circle([lat, lng], {
+                    color: '#3b82f6',
+                    fillColor: '#3b82f6',
+                    fillOpacity: 0.1,
+                    radius: 100
+                }).addTo(map);
+                
+                mapInitialized = true;
+                console.log('Карта успешно инициализирована');
+                
+            } catch (error) {
+                console.error('Ошибка инициализации карты:', error);
+                // Показываем сообщение об ошибке
+                mapContainer.innerHTML = `
+                    <div style="height: 100%; display: flex; align-items: center; justify-content: center; background: #f3f4f6; border-radius: 16px; padding: 20px; text-align: center;">
+                        <div>
+                            <i class="fas fa-map-marker-alt" style="font-size: 48px; color: #6b7280; margin-bottom: 16px;"></i>
+                            <h3 style="color: #374151; margin-bottom: 8px;">Карта временно недоступна</h3>
+                            <p style="color: #6b7280;">Адрес: г. Новосибирск, ул. Ленина, 1</p>
+                            <p style="color: #6b7280; font-size: 14px;">Метро: Площадь Ленина</p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Функция для повторной инициализации карты
+        function reinitMap() {
+            if (map) {
+                map.remove();
+                map = null;
+            }
+            mapInitialized = false;
+            initMap();
+        }
+        
+        // Функции модального окна
+        function showCallbackForm() {
+            const modal = document.getElementById('callback-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                
+                // Фокус на первое поле
+                setTimeout(() => {
+                    const firstInput = modal.querySelector('input');
+                    if (firstInput) firstInput.focus();
+                }, 100);
+            }
+        }
+        
+        function hideCallbackForm() {
+            const modal = document.getElementById('callback-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+                document.getElementById('callback-form').reset();
+            }
+        }
+        
+        function showEmailForm() {
+            window.location.href = 'mailto:info@sibelectro.ru?subject=Вопрос по электромонтажным работам';
+        }
+        
+        function showMap() {
+            const mapElement = document.getElementById('map');
+            if (mapElement) {
+                mapElement.scrollIntoView({ behavior: 'smooth' });
+                
+                // Переинициализируем карту при переходе к ней
+                setTimeout(() => {
+                    if (!mapInitialized) {
+                        initMap();
+                    } else if (map) {
+                        // Обновляем размер карты
+                        setTimeout(() => {
+                            map.invalidateSize();
+                        }, 300);
+                    }
+                }, 500);
+            }
+        }
+        
+        // Обработка форм с отправкой в Telegram
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM загружен, инициализируем компоненты...');
+            
+            const contactForm = document.getElementById('contact-form');
+            const callbackForm = document.getElementById('callback-form');
+            
+            // Обработка основной формы обратной связи
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Проверка согласия
+                    const privacyCheckbox = document.getElementById('privacy');
+                    if (!privacyCheckbox?.checked) {
+                        alert('Пожалуйста, согласитесь на обработку персональных данных');
+                        privacyCheckbox?.focus();
+                        return;
+                    }
+                    
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Проверка обязательных полей
+                    if (!data.name || !data.phone) {
+                        alert('Пожалуйста, заполните имя и телефон');
+                        if (!data.name) {
+                            document.getElementById('name').focus();
+                        } else {
+                            document.getElementById('phone').focus();
+                        }
+                        return;
+                    }
+                    
+                    // Показываем индикатор загрузки
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    const originalDisabled = submitBtn.disabled;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
+                    submitBtn.disabled = true;
+                    
+                    try {
+                        // Сохраняем состояние чекбокса перед reset
+                        const privacyChecked = privacyCheckbox.checked;
+                        
+                        // Отправляем в Telegram
+                        const success = await sendToTelegram(data, 'contact');
+                        
+                        if (success) {
+                            alert('✅ Заявка отправлена! Мы свяжемся с вами в течение 15 минут.');
+                            this.reset();
+                            // Восстанавливаем чекбокс согласия
+                            if (privacyCheckbox && privacyChecked) {
+                                privacyCheckbox.checked = true;
+                            }
+                        } else {
+                            alert('⚠️ Ошибка отправки. Пожалуйста, позвоните нам напрямую: +7 (383) 222-22-22');
+                        }
+                    } catch (error) {
+                        console.error('Ошибка отправки формы:', error);
+                        alert('⚠️ Ошибка соединения. Пожалуйста, попробуйте еще раз.');
+                    } finally {
+                        // Восстанавливаем кнопку
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = originalDisabled;
+                    }
+                });
+            }
+            
+            // Обработка формы обратного звонка
+            if (callbackForm) {
+                callbackForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Проверка обязательных полей
+                    if (!data['callback-name'] || !data['callback-phone']) {
+                        alert('Пожалуйста, заполните имя и телефон');
+                        return;
+                    }
+                    
+                    // Показываем индикатор загрузки
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    const originalDisabled = submitBtn.disabled;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
+                    submitBtn.disabled = true;
+                    
+                    try {
+                        // Отправляем в Telegram
+                        const success = await sendToTelegram(data, 'callback');
+                        
+                        if (success) {
+                            alert('✅ Заявка на обратный звонок принята! Мы перезвоним вам в указанное время.');
+                            hideCallbackForm();
+                            this.reset();
+                        } else {
+                            alert('⚠️ Ошибка отправки. Пожалуйста, позвоните нам напрямую: +7 (383) 222-22-22');
+                        }
+                    } catch (error) {
+                        console.error('Ошибка отправки формы:', error);
+                        alert('⚠️ Ошибка соединения. Пожалуйста, попробуйте еще раз.');
+                    } finally {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = originalDisabled;
+                    }
+                });
+            }
+            
+            // Инициализация карты с задержкой
+            setTimeout(() => {
+                initMap();
+            }, 500);
+            
+            // Также инициализируем при полной загрузке страницы
+            window.addEventListener('load', function() {
+                if (!mapInitialized) {
+                    setTimeout(() => {
+                        initMap();
+                    }, 300);
+                }
+            });
+            
+            // Обновляем размер карты при изменении размера окна
+            window.addEventListener('resize', function() {
+                if (map) {
+                    setTimeout(() => {
+                        map.invalidateSize();
+                    }, 200);
+                }
+            });
+            
+            // Закрытие модального окна при клике вне его
+            document.addEventListener('click', function(e) {
+                const modal = document.getElementById('callback-modal');
+                if (e.target === modal) {
+                    hideCallbackForm();
+                }
+            });
+            
+            // Закрытие модального окна клавишей Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    hideCallbackForm();
+                }
+            });
+            
+            // Валидация телефонных номеров
+            const phoneInputs = document.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    let value = this.value.replace(/\D/g, '');
+                    
+                    if (value.length > 0) {
+                        if (value[0] === '7' || value[0] === '8') {
+                            value = value.substring(1);
+                        }
+                        
+                        let formattedValue = '+7 (';
+                        
+                        if (value.length > 0) {
+                            formattedValue += value.substring(0, 3);
+                        }
+                        if (value.length > 3) {
+                            formattedValue += ') ' + value.substring(3, 6);
+                        }
+                        if (value.length > 6) {
+                            formattedValue += '-' + value.substring(6, 8);
+                        }
+                        if (value.length > 8) {
+                            formattedValue += '-' + value.substring(8, 10);
+                        }
+                        
+                        this.value = formattedValue;
+                    }
+                });
+            });
+            
+            // Обработка кнопки "Показать на карте"
+            const showMapBtn = document.querySelector('button[onclick="showMap()"]');
+            if (showMapBtn) {
+                showMapBtn.addEventListener('click', showMap);
+            }
+        });
+    </script>
+</body>
+</html>

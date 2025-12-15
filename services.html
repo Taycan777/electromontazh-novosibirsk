@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - СибЭлектроПроект | Электромонтажные работы в Новосибирске</title>
+    <meta name="description" content="Полный спектр электромонтажных услуг для офисов, складов и производств в Новосибирске. Профессиональные электрики, гарантия качества.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="logo-container">
+                <img src="resources/logo.png" alt="СибЭлектроПроект" class="logo-img" loading="lazy">
+                <div class="logo-text">
+                    <h1>СибЭлектроПроект</h1>
+                    <p>Новосибирск</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="services.html" class="nav-link active">Услуги</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="tel:+73832222222" class="phone-btn">
+                    <i class="fas fa-phone"></i> +7 (383) 222-22-22
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <a href="index.html" class="nav-link block">Главная</a>
+                <a href="services.html" class="nav-link active block">Услуги</a>
+                <a href="contacts.html" class="nav-link block">Контакты</a>
+                <a href="tel:+73832222222" class="nav-link block text-orange-600">+7 (383) 222-22-22</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="services-hero">
+        <div class="services-hero-bg">
+            <img src="resources/hero-electrician.jpg" alt="Электромонтажные работы" loading="lazy">
+        </div>
+        
+        <div class="container">
+            <div class="services-hero-content">
+                <h1 class="services-hero-title">Наши услуги</h1>
+                <p class="services-hero-description">
+                    Полный спектр электромонтажных работ для коммерческих помещений. 
+                    Профессиональный подход, современное оборудование, гарантия качества.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сетка услуг -->
+    <section class="section">
+        <div class="container">
+            
+            <!-- Услуги для офисов -->
+            <div class="services-section">
+                <div class="section-header">
+                    <h2 class="section-title">Электрика для офисов</h2>
+                    <p class="section-subtitle">
+                        Комплексные электромонтажные решения для офисных помещений любой сложности
+                    </p>
+                </div>
+                
+                <div class="services-row">
+                    <!-- Карточка 1 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-blue-100">
+                            <i class="fas fa-plug text-blue-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Установка розеток и выключателей</h3>
+                        <p class="service-item-description">
+                            Монтаж розеток, выключателей, диммеров и других элементов управления освещением и оборудованием.
+                        </p>
+                        <div class="service-item-price text-blue-600">от 450 ₽/шт</div>
+                        <ul class="service-item-details">
+                            <li>• Подбор места установки</li>
+                            <li>• Штробление стен</li>
+                            <li>• Подключение и тестирование</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-orange-100">
+                            <i class="fas fa-lightbulb text-orange-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Монтаж освещения</h3>
+                        <p class="service-item-description">
+                            Установка светильников, люстр, точечного освещения, светодиодных лент и систем управления освещением.
+                        </p>
+                        <div class="service-item-price text-orange-600">от 650 ₽/шт</div>
+                        <ul class="service-item-details">
+                            <li>• Подбор светильников</li>
+                            <li>• Монтаж и подключение</li>
+                            <li>• Настройка управления</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-green-100">
+                            <i class="fas fa-bolt text-green-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Электрощиты и щитки</h3>
+                        <p class="service-item-description">
+                            Сборка и монтаж электрощитов, установка автоматов, УЗО, счетчиков и другого оборудования.
+                        </p>
+                        <div class="service-item-price text-green-600">от 2 400 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Подбор оборудования</li>
+                            <li>• Сборка щита</li>
+                            <li>• Подключение и настройка</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-purple-100">
+                            <i class="fas fa-network-wired text-purple-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Прокладка кабельных линий</h3>
+                        <p class="service-item-description">
+                            Прокладка силовых и слаботочных кабельных линий в кабель-каналах, гофре и штробах.
+                        </p>
+                        <div class="service-item-price text-purple-600">от 90 ₽/м</div>
+                        <ul class="service-item-details">
+                            <li>• Разметка трасс</li>
+                            <li>• Штробление или монтаж каналов</li>
+                            <li>• Прокладка и фиксация кабеля</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 5 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-red-100">
+                            <i class="fas fa-wifi text-red-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Слаботочные системы</h3>
+                        <p class="service-item-description">
+                            Монтаж систем интернет, телефонии, видеонаблюдения, контроля доступа и других слаботочных систем.
+                        </p>
+                        <div class="service-item-price text-red-600">от 1 500 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование систем</li>
+                            <li>• Монтаж оборудования</li>
+                            <li>• Настройка и тестирование</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 6 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-indigo-100">
+                            <i class="fas fa-tools text-indigo-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Реконструкция и ремонт</h3>
+                        <p class="service-item-description">
+                            Замена старой электропроводки, модернизация электрощитов, ремонт и обслуживание электросистем.
+                        </p>
+                        <div class="service-item-price text-indigo-600">от 15 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Диагностика системы</li>
+                            <li>• Замена элементов</li>
+                            <li>• Тестирование и сдача</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Услуги для складов -->
+            <div class="services-section">
+                <div class="section-header">
+                    <h2 class="section-title">Электрика для складов</h2>
+                    <p class="section-subtitle">
+                        Надежные электромонтажные решения для складских и логистических комплексов
+                    </p>
+                </div>
+                
+                <div class="services-row">
+                    <!-- Карточка 1 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-yellow-100">
+                            <i class="fas fa-warehouse text-yellow-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Промышленное освещение</h3>
+                        <p class="service-item-description">
+                            Монтаж светодиодных прожекторов, промышленных светильников, систем аварийного освещения.
+                        </p>
+                        <div class="service-item-price text-yellow-600">от 850 ₽/шт</div>
+                        <ul class="service-item-details">
+                            <li>• Расчет освещенности</li>
+                            <li>• Подбор оборудования</li>
+                            <li>• Монтаж и настройка</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-teal-100">
+                            <i class="fas fa-bolt text-teal-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Силовые линии</h3>
+                        <p class="service-item-description">
+                            Прокладка силовых кабельных линий для подключения технологического оборудования и машин.
+                        </p>
+                        <div class="service-item-price text-teal-600">от 120 ₽/м</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование трасс</li>
+                            <li>• Монтаж кабельных лотков</li>
+                            <li>• Подключение оборудования</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-pink-100">
+                            <i class="fas fa-shield-alt text-pink-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Заземление и молниезащита</h3>
+                        <p class="service-item-description">
+                            Установка систем заземления и молниезащиты для обеспечения безопасности складского комплекса.
+                        </p>
+                        <div class="service-item-price text-pink-600">от 9 400 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование системы</li>
+                            <li>• Монтаж заземления</li>
+                            <li>• Испытания и сертификация</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-gray-100">
+                            <i class="fas fa-thermometer-half text-gray-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Системы отопления</h3>
+                        <p class="service-item-description">
+                            Электромонтаж систем инфракрасного отопления, теплых полов и других видов электрообогрева.
+                        </p>
+                        <div class="service-item-price text-gray-600">от 350 ₽/м²</div>
+                        <ul class="service-item-details">
+                            <li>• Расчет мощности</li>
+                            <li>• Монтаж нагревателей</li>
+                            <li>• Подключение управления</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 5 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-cyan-100">
+                            <i class="fas fa-video text-cyan-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Видеонаблюдение</h3>
+                        <p class="service-item-description">
+                            Установка систем видеонаблюдения, контроля доступа и охранной сигнализации для склада.
+                        </p>
+                        <div class="service-item-price text-cyan-600">от 2 500 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование системы</li>
+                            <li>• Монтаж оборудования</li>
+                            <li>• Настройка и обучение</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 6 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-lime-100">
+                            <i class="fas fa-chart-line text-lime-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Энергоаудит</h3>
+                        <p class="service-item-description">
+                            Анализ энергопотребления, разработка мероприятий по энергосбережению и оптимизации расходов.
+                        </p>
+                        <div class="service-item-price text-lime-600">от 5 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Аудит системы</li>
+                            <li>• Рекомендации</li>
+                            <li>• Расчет экономии</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Услуги для производств -->
+            <div class="services-section">
+                <div class="section-header">
+                    <h2 class="section-title">Электрика для производств</h2>
+                    <p class="section-subtitle">
+                        Сложные электромонтажные решения для промышленных предприятий и производственных комплексов
+                    </p>
+                </div>
+                
+                <div class="services-row">
+                    <!-- Карточка 1 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-red-100">
+                            <i class="fas fa-cogs text-red-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Силовое оборудование</h3>
+                        <p class="service-item-description">
+                            Монтаж трансформаторных подстанций, распределительных щитов, силового оборудования.
+                        </p>
+                        <div class="service-item-price text-red-600">от 25 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование системы</li>
+                            <li>• Монтаж оборудования</li>
+                            <li>• Пусконаладочные работы</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-orange-100">
+                            <i class="fas fa-robot text-orange-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Автоматизация производства</h3>
+                        <p class="service-item-description">
+                            Электромонтаж систем автоматизации, диспетчеризации и управления технологическими процессами.
+                        </p>
+                        <div class="service-item-price text-orange-600">от 35 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Разработка системы</li>
+                            <li>• Монтаж оборудования</li>
+                            <li>• Программирование и настройка</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-blue-100">
+                            <i class="fas fa-battery-full text-blue-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Резервное питание</h3>
+                        <p class="service-item-description">
+                            Установка систем бесперебойного питания, дизель-генераторов и источников резервного электроснабжения.
+                        </p>
+                        <div class="service-item-price text-blue-600">от 45 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Расчет мощности</li>
+                            <li>• Подбор оборудования</li>
+                            <li>• Монтаж и настройка</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-green-100">
+                            <i class="fas fa-fire-extinguisher text-green-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Пожарная безопасность</h3>
+                        <p class="service-item-description">
+                            Монтаж систем пожарной сигнализации, оповещения и автоматического пожаротушения.
+                        </p>
+                        <div class="service-item-price text-green-600">от 15 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование системы</li>
+                            <li>• Монтаж датчиков</li>
+                            <li>• Настройка и тестирование</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 5 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-purple-100">
+                            <i class="fas fa-chart-bar text-purple-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Системы учета энергии</h3>
+                        <p class="service-item-description">
+                            Установка систем автоматизированного учета электроэнергии (АСКУЭ) и контроля расходов.
+                        </p>
+                        <div class="service-item-price text-purple-600">от 8 000 ₽</div>
+                        <ul class="service-item-details">
+                            <li>• Проектирование АСКУЭ</li>
+                            <li>• Монтаж счетчиков</li>
+                            <li>• Настройка программного обеспечения</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Карточка 6 -->
+                    <div class="service-item">
+                        <div class="service-icon bg-yellow-100">
+                            <i class="fas fa-wrench text-yellow-600"></i>
+                        </div>
+                        <h3 class="service-item-title">Техническое обслуживание</h3>
+                        <p class="service-item-description">
+                            Комплексное обслуживание электрооборудования, плановые осмотры и аварийные выезды.
+                        </p>
+                        <div class="service-item-price text-yellow-600">от 5 000 ₽/мес</div>
+                        <ul class="service-item-details">
+                            <li>• Регулярные осмотры</li>
+                            <li>• Профилактические работы</li>
+                            <li>• 24/7 аварийная служба</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA секция -->
+            <div class="cta-section">
+                <h2 class="cta-title">Не нашли нужную услугу?</h2>
+                <p class="cta-description">
+                    Свяжитесь с нашими специалистами для получения консультации и индивидуального решения
+                </p>
+                <div class="cta-buttons">
+                    <a href="tel:+73832222222" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Позвонить нам
+                    </a>
+                    <a href="contacts.html" class="btn btn-outline">
+                        <i class="fas fa-map-marker-alt"></i> Наши контакты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="resources/logo.png" alt="СибЭлектроПроект" width="40" height="40" loading="lazy">
+                        <div>
+                            <h3>СибЭлектроПроект</h3>
+                            <p>Новосибирск</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Профессиональные электромонтажные работы для офисов, складов и производств. 
+                        Работаем в Новосибирске и области.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Электрика для офисов</a></li>
+                        <li><a href="services.html">Электрика для складов</a></li>
+                        <li><a href="services.html">Электрика для производств</a></li>
+                        <li><a href="services.html">Проектирование</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +7 (383) 222-22-22</li>
+                        <li><i class="fas fa-envelope"></i> info@sibelectro.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Новосибирск, ул. Жуковского, 2</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 8:00-18:00</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Мессенджеры</h4>
+                    <div class="messengers">
+                        <a href="https://wa.me/73832222222" class="messenger-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://t.me/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://vk.com/taycan_ru" class="messenger-link" target="_blank">
+                            <i class="fab fa-vk"></i> VK
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 СибЭлектроПроект. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="main.js"></script>
+</body>
+</html>
